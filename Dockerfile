@@ -1,9 +1,3 @@
-FROM alpine:3.15
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
 
-RUN apk -U add nginx \
-&& touch /var/www/index.html
-
-ADD nginx.conf /etc/nginx/nginx.conf
-ADD nginx.default /etc/nginx/conf.d/default.conf
-
-ENTRYPOINT nginx
