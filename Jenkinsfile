@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t nbrico/container-build-demo:latest .'
+				sh 'docker build -t nbrico/nginx-build-demo:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push nbrico/container-build-demo:latest'
+				sh 'docker push nbrico/nginx-build-demo:latest'
 			}
 		}
 	}
